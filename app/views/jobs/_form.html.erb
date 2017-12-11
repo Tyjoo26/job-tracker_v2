@@ -13,5 +13,5 @@
 
   <%= f.collection_select :category_id, Category.order(:title), :id, :title, include_blank: true%>
 
-  <%= f.submit %>
+  <%= f.submit "Submit"%>
 <% end %>

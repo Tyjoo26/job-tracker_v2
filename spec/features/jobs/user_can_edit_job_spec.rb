@@ -13,7 +13,7 @@ describe "As a user" do
 
       click_link("Edit")
 
-      expect(current_path).to eq(edit_company_path(@company,@job))
+      expect(current_path).to eq(edit_company_job_path(@company,@job))
 
       fill_in"job[title]", with: "Sports Analyst"
       fill_in"job[description]", with: "Sports"
@@ -31,7 +31,7 @@ describe "As a user" do
 
       click_link("Edit")
 
-      expect(current_path).to eq(edit_company_path(@company,@job))
+      expect(current_path).to eq(edit_company_job_path(@company,@job))
 
       fill_in"job[title]", with: "Sports Analyst"
       fill_in"job[description]", with: "Sports"
