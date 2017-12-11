@@ -1,4 +1,6 @@
 <h1>Category Details</h1><br>
 
 <%= @category.title %><br>
+<%= link_to "Edit", edit_category_path(@category) %><br>
+<%= link_to "Delete", category_path(@category), :data => {:confirm => "Confirm Delete?", :method => "delete"} %><br>
 <%= link_to "Go Back to Categories Index", categories_path %>
