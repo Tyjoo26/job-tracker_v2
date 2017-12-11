@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+
   def index
     @company = Company.find(params[:company_id])
     @jobs = @company.jobs
@@ -6,11 +7,14 @@ class JobsController < ApplicationController
 
   def new
     @company = Company.find(params[:company_id])
+    @categories = Category.all
     @job = Job.new()
   end
 
   def create
     @company = Company.find(params[:company_id])
+    @categories = Category.all
+    
     @job = @company.jobs.new(job_params)
     if @job.save
       flash[:success] = "You created #{@job.title} at #{@company.name}"
