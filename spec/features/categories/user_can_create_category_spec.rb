@@ -10,7 +10,7 @@ describe "As a user" do
 
       fill_in "category[title]", with: "Entertainment"
 
-      click_button("Create")
+      click_button("Create Category")
 
       expect(current_path).to eq("/categories/#{Category.last.id}")
     end
