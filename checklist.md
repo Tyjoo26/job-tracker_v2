@@ -6,9 +6,9 @@ obs
 
 Categories
 
-[] The user can create a new Category by filling out a form. Each Category has a title (e.g. “Web Development”, “Education”, “Finance”).
+[x] The user can create a new Category by filling out a form. Each Category has a title (e.g. “Web Development”, “Education”, “Finance”).
 
-[] When the user successfully creates a Category they are shown a page with the Category title.
+[x] When the user successfully creates a Category they are shown a page with the Category title.
 
 [] When the user tries to create a Category that already exists, they are brought back to the page with the form to create a Category.
 
