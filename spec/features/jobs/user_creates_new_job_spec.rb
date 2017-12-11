@@ -10,14 +10,17 @@ describe "User creates a new job" do
     fill_in "job[description]", with: "So fun!"
     fill_in "job[level_of_interest]", with: 80
     fill_in "job[city]", with: "Denver"
+    select("Entertainment", from: "job_category_id").select_option
+
 
 
     click_button "Create"
 
-    expect(current_path).to eq("/companies/#{company.id}/jobs/#{Job.last.id}")
+    expect(current_path).to eq(company_jobs_path(company))
     expect(page).to have_content("ESPN")
     expect(page).to have_content("Developer")
     expect(page).to have_content("80")
     expect(page).to have_content("Denver")
+    expect(page).to have_content("Entertainment")
   end
 end
