@@ -16,7 +16,7 @@ describe "User creates a new job" do
 
     click_button "Create"
 
-    expect(current_path).to eq(company_jobs_path(company))
+    expect(current_path).to eq(company_job_path(company,Job.last.id))
     expect(page).to have_content("ESPN")
     expect(page).to have_content("Developer")
     expect(page).to have_content("80")
