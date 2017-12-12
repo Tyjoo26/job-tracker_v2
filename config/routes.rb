@@ -4,10 +4,14 @@ Rails.application.routes.draw do
     resources :jobs
   end
 
-  resources :categories 
+  resources :categories
 
   resources :jobs do
     resources :comments
+  end
+
+  resources :companies do
+    resources :contacts
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
