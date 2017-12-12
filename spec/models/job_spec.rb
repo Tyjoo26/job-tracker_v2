@@ -15,12 +15,12 @@ describe Job do
       end
 
       it "is invalid without a level of interest" do
-        job = @company.jobs.(title: "Developer", description: "Wahoo", city: "Denver", category: @category)
+        job = @company.jobs.new(title: "Developer", description: "Wahoo", city: "Denver", category: @category)
         expect(job).to be_invalid
       end
 
       it "is invalid without a city" do
-        job = @company.jobs.(title: "Developer", description: "Wahoo", level_of_interest: 80, category: @category)
+        job = @company.jobs.new(title: "Developer", description: "Wahoo", level_of_interest: 80, category: @category)
         expect(job).to be_invalid
       end
     end
@@ -29,7 +29,7 @@ describe Job do
       it "is valid with a title, level of interest, and company" do
         company = Company.new(name: "Turing")
         category = Category.create(title: "Entertainment")
-        
+
         job = Job.new(title: "Developer", level_of_interest: 40, city: "Denver", company: company, category: category)
         expect(job).to be_valid
       end

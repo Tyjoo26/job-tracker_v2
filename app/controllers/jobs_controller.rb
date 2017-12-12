@@ -49,7 +49,7 @@ class JobsController < ApplicationController
 
     @job.destroy
 
-    redirect_to companies_job_path(@company)
+    redirect_to company_job_path(@company)
   end
 
   private
