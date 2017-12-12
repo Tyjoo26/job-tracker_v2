@@ -8,7 +8,7 @@ class JobsController < ApplicationController
   def new
     @company = Company.find(params[:company_id])
     @categories = Category.all
-    @job = Job.new()
+    @job = @company.jobs.new
   end
 
   def create
@@ -49,7 +49,7 @@ class JobsController < ApplicationController
 
     @job.destroy
 
-    redirect_to company_job_path(@company)
+    redirect_to company_jobs_path(@company)
   end
 
   private
