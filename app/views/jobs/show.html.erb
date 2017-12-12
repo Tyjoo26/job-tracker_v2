@@ -19,3 +19,10 @@ Category: <%= link_to @job.category.title, category_path(@job.category) %>
 <br>
 <div><%= link_to "Edit", edit_company_job_path(@company, @job) %></div>
 <div> <%= link_to "Delete", company_jobs_path, :data => {:confirm => "Confirm Delete?", :method => "delete"}%>  </div>
+<br>
+<div class="">
+  <% @job.comments.each do |comment| %>
+  <%= comment.content %>
+  <% end %>
+</div>
+<%= render partial: "/comments/form" %>

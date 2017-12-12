@@ -15,7 +15,7 @@ describe "As a user" do
 
       fill_in"comment[content]", with: "THIS IS A GREAT JOB WOO HOOO!!!"
 
-      click_link("Submit")
+      click_button("Post Comment")
 
       expect(current_path).to eq(company_job_path(@company, @job))
     end

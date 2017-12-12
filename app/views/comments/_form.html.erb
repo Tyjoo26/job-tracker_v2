@@ -1,0 +1,6 @@
+<%= form_for ([@job, @comment]) do |f| %>
+<%= f.label       :content %>
+<%= f.text_field :content, placeholder: "Enter your comment here" %>
+
+<%= f.submit     "Post Comment" %>
+<% end %>

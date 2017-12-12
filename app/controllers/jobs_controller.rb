@@ -29,6 +29,7 @@ class JobsController < ApplicationController
   def show
     @company = Company.find(params[:company_id])
     @job = @company.jobs.find(params[:id])
+    @comment = @job.comments.new
   end
 
   def edit
@@ -57,4 +58,6 @@ class JobsController < ApplicationController
   def job_params
     params.require(:job).permit(:title, :description, :level_of_interest, :city, :category_id)
   end
+
+
 end
