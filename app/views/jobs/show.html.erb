@@ -21,7 +21,7 @@ Category: <%= link_to @job.category.title, category_path(@job.category) %>
 <div> <%= link_to "Delete", company_jobs_path, :data => {:confirm => "Confirm Delete?", :method => "delete"}%>  </div>
 <br>
 <div class="">
-  <% @job.comments.each do |comment| %>
+  <% @job.comments.reverse_each do |comment| %>
   <%= comment.content %>
   <% end %>
 </div>
