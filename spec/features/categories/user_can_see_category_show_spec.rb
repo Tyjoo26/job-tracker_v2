@@ -25,5 +25,24 @@ describe 'As a user' do
 
       expect(current_path).to eq(categories_path)
     end
+
+    it "also displays all the jobs associated with this specific category" do
+      @entertainment = Category.create(title: "Entertainment")
+      @company = Company.create(name: "ESPN")
+
+      @job = @company.jobs.create(title: "Financial Analyst", description: "Penny Pusher", level_of_interest: 80, city: "Denver", category: @entertainment)
+
+      @job_2 = @company.jobs.create(title: "Sports Analyst", description: "Sports Pusher", level_of_interest: 32, city: "NYC", category: @entertainment)
+
+      visit category_path(@entertainment)
+
+      expect(page).to have_content("Financial Analyst")
+      expect(page).to have_content("Sports Analyst")
+      expect(page).to have_content("Penny Pusher")
+      expect(page).to have_content("Sports Pusher")
+      expect(page).to have_content("Denver")
+      expect(page).to have_content("NYC")
+
+    end
   end
 end
