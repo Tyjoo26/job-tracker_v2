@@ -13,7 +13,12 @@
   <%= f.label :city %>
   <%= f.text_field :city %>
 
-  <%= f.collection_select :category_id, Category.order(:title), :id, :title, include_blank: true%>
+  Select Category: <%= f.collection_select :category_id, Category.order(:title), :id, :title, include_blank: true%><br>
+  <%= link_to "Create Category", new_category_path %>
 
+<br>
+<div class="">
   <%= f.submit "Create"%>
+</div>
+
 <% end %>
