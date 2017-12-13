@@ -3,9 +3,20 @@ require 'rails_helper'
 RSpec.describe "Comments" do
   context "Validations" do
     it "will be invalid without content " do
-      comment = Comment.new
+      company = Company.create(name: "ESPN")
+      category = Category.create(title: "JOKE")
+      job = Job.create(title: "GINGA NINJA", description: "CHUCK NORRIS", level_of_interest: 99, city: "Denver", company: company, category: category)
+      comment = Comment.new(job: job)
 
       expect(comment).to be_invalid
+    end
+
+    it "will be invalid without job associated with ti" do
+      company = Company.create(name: "ESPN")
+      category = Category.create(title: "JOKE")
+      job = Job.create(title: "GINGA NINJA", description: "CHUCK NORRIS", level_of_interest: 99, city: "Denver", company: company, category: category)
+
+      comment = Comment.new(content: "shh")
     end
 
     it "will be valid with content" do

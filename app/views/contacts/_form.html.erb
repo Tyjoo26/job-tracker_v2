@@ -1,0 +1,14 @@
+<%= form_for ([@company, @contact]), :url => url_for(:controller => "contacts", :action => "create") do |f| %>
+
+<%= f.label       :full_name %>
+<%= f.text_field :full_name, placeholder: "Name" %>
+
+<%= f.label       :position %>
+<%= f.text_field :position, placeholder: "Position" %>
+
+<%= f.label       :email %>
+<%= f.text_field :email, placeholder: "Email" %>
+
+
+<%= f.submit     "Post Contact" %>
+<% end %>
