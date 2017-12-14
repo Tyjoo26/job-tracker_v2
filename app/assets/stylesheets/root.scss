@@ -1,0 +1,21 @@
+$navblue: #3E92CC;
+$darkblue: #13293D;
+$nicegreen: #7CA982;
+
+.root_nav{
+  display:flex;
+  background-color: $navblue;
+  font-size: 32px;
+}
+
+.root-box{
+  border: 3px;
+  border-style: solid;
+  display:inline-flex;
+  justify-content: center;
+  text-align:justify;
+  padding: 5px 5px 5px 5px;
+  font-size: 22px;
+  margin: 20px;
+
+}

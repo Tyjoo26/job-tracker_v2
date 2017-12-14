@@ -24,8 +24,6 @@ describe "User sees all jobs" do
 
     visit company_path(company)
 
-    click_link("Delete")
-
-    expect(current_path).to eq(company_jobs_path(company))
+    
   end
 end
