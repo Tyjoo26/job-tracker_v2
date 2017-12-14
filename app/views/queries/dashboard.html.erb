@@ -1,0 +1,18 @@
+<h1>Analysis Dashboard</h1>
+<br>
+<div class="analysis">
+<h4>Top Three Companies by Avg Level of Interest</h4>
+<% Company.top_three.each do |c| %>
+<li>
+  <%=c.name %>
+</li>
+<% end %>
+<h4>Job Count by Location</h4>
+<% Job.count_jobs_location.each_pair do |location, count| %>
+<li> <%= "Location : #{location} | Count : #{count}" %> </li>
+<% end %>
+<h4> Level Of Interest:</h4>
+  <% Job.count_by_level_of_interest.each_pair do |interest, count|%>
+<li><%= "Level Of Interest : #{interest} | Count : #{count}" %></li>
+  <% end %>
+</div>

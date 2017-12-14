@@ -40,7 +40,8 @@ class JobsController < ApplicationController
 
   def update
     @company = Company.find(params[:company_id])
-    @job = @company.jobs.update(job_params)
+    @job = Job.find(params[:id])
+    @job.update(job_params)
 
     redirect_to company_job_path(@company, @job)
   end
