@@ -1,0 +1,21 @@
+create_table :categories do |t|
+  t.string   :title
+
+AddCategoryToJobs
+    add_reference :jobs, :category, foreign_key: true
+
+create comments
+t.text  :content
+
+
+add job to comment
+  add_reference :comments, :job, foreign_key: true
+
+
+create contact
+
+t.text      :full_name
+t.text      :position
+t.text      :email
+
+add company to contact   add_reference :contacts, :company, foreign_key: true
