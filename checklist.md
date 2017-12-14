@@ -38,7 +38,7 @@ Contacts
 
 Analysis
 
-[] The user can visit /jobs?sort=location to view a list of the jobs sorted by city.
+[x] The user can visit /jobs?sort=location to view a list of the jobs sorted by city.
 
 [] The user can visit /dashboard to see
 

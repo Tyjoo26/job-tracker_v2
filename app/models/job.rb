@@ -5,7 +5,13 @@ class Job < ApplicationRecord
   has_many :comments, dependent: :destroy
 
 
-  def self.count_by_level_of_interest
-    count(:level_of_interest)
+  def self.sort(argument)
+
   end
+
+  def self.count_by_level_of_interest
+    group(:level_of_interest).order('level_of_interest DESC').count
+  end
+
+
 end
