@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/jobs', to: "queries#index"
 
+  get '/dashboard', to: "queries#dashboard"
+
   resources :companies do
     resources :jobs
   end
