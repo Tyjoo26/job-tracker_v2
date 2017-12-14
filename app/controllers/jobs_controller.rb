@@ -53,6 +53,8 @@ class JobsController < ApplicationController
     redirect_to company_jobs_path(@company)
   end
 
+
+
   private
 
   def job_params
