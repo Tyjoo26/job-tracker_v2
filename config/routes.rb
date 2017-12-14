@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: "jobs#dashboard"
+  root to: "jobs#root"
 
   get '/jobs', to: "queries#index"
 

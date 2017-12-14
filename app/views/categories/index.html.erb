@@ -1,11 +1,16 @@
+
 <h1>All Categories</h1>
 
 <% @categories.each do |category| %>
-<div class="">
+<div class="category-index-table">
 <%= link_to category.title, category_path(category) %><br>
 <%= link_to "Edit", edit_category_path(category) %><br>
 <%= link_to "Delete", category_path(category),:data => {:confirm => "Confirm Delete?", :method => "delete"} %>
 </div>
 <% end %><br>
-<%= link_to "Create Category", new_category_path %><br>
-<%= link_to "Go Back To Root Page", root_path %>
+<div class="create-categorybutton">
+  <%= link_to "Create Category", new_category_path %><br>
+</div>
+<div class="home-link">
+  <%= link_to "Go Back To Home Page", root_path %>
+</div>

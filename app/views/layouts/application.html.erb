@@ -2,9 +2,13 @@
 <html>
 <head>
   <title>JobTracker</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <nav class = "root_nav">
+    <h1>Job Tracker</h1>
+  </nav>
 </head>
 <body>
   <% flash.each do |name, msg| %>
